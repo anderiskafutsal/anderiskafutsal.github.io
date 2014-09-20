@@ -1,0 +1,95 @@
+doctype html
+html
+  head
+    title Anderiska Futsal | Futsal Rumput Sintetis Riung Bandung Timur
+    meta name="keywords" content="futsal riung bandung timur rumput sintetis"
+
+    link rel="stylesheet" href="css/bootstrap.min.css"
+    link rel="stylesheet" href="css/style.css"
+  body
+    section.page-section.cover-section
+      header.navbar role="navigation"
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target=".navbar-collapse"
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand href="#"
+              img src="img/logo.png" alt="Anderiska logo"
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li.active
+                a href="#" data-toggle="modal" data-target="#jadwal_modal" Jadwal
+              li
+                a href="#section_fasilitas" Fasilitas
+              li
+                a href="#section_lokasi" Lokasi
+              li.highlight-menu
+                a href="#section_booking" Booking Tempat
+      .cover-bg &nbsp;
+      .container
+        .row
+          .col-sm-6.col-sm-offset-3.text-center
+            img.cover-logo src="img/cover-logo.png" alt="Anderiska Futsal Cover"
+
+            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+
+            div
+              a.btn.btn-white.btn-width-m href="#section_booking" Booking Tempat
+              button.btn.btn-white.btn-width-m data-toggle="modal" data-target="#jadwal_modal" Lihat Jadwal
+
+    section#section_fasilitas.page-section
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2.text-center
+            h2 Lapangan Futsal Rumput Sintetis di Bandung Timur
+            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+
+
+          .col-sm-6.col-md-3
+            h3 Standar Internasional
+            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+          .col-sm-6.col-md-3
+            h3 Free WiFi
+            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+          .col-sm-6.col-md-3
+            h3 Parkir Luas
+            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+          .col-sm-6.col-md-3
+            h3 Kantin
+            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+    section#section_lokasi.page-section
+    section#section_booking.page-section
+      .container
+        .row
+          .col-sm-6
+            h2 Booking Lapangan
+            p Untuk booking lapangan bisa dengan menelepon atau datang langsung ke lapangan dengan alamat disamping. Untuk mengetahui ketersediaan lapang klik tombol dibawah ini.
+            button.btn.btn-default data-toggle="modal" data-target="#modal_jadwal" Lihat Jadwal
+          .col-sm-6.text-right
+            div (022) 929-74-502
+            div Jl. Riung Arum Timur III No.44
+            div Lihat di Peta
+    footer
+      .container
+        .row
+          .col-sm-6.copyright
+            | Anderiska Futsal &copy; 2014
+          .col-sm-6.footer-menu
+
+    #jadwal_modal.modal.fade
+      .modal-dialog style="width: 1170px;"
+        .modal-content
+          .modal-header
+            button.close data-dismiss="modal" type="button"
+              span aria-hidden="true"  &times;
+              span.sr-only Close
+            h4.modal-title Modal title
+          .modal-body
+            iframe src="https://docs.google.com/spreadsheets/d/1Vtp4ykOfpmzm7X9jpvuNtsfdT9qZs3dtuBzuZqvCEsU/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="width: 100%; min-height: 480px;"
+
+
+    script src="js/jquery-1.11.1.min.js"
+    script src="js/bootstrap.min.js"

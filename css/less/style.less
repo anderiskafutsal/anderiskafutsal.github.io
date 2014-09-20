@@ -1,0 +1,76 @@
+@import url('fonts.less');
+@import url('lesshat.less');
+@import url('variables.less');
+@import url('mixins.less');
+
+body{
+  color: @color-main;
+  font-family: 'lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
+
+.page-section{
+  padding: 40px 0;
+  position: relative;
+}
+
+  .cover-section{
+    padding-top: 0;
+    height: 560px;
+    color: @white;
+    background: @color-dark-main;
+
+    header{
+      z-index: 1;
+    }
+  }
+
+    .cover-bg{
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('../img/cover.jpg');
+      background-position: center;
+      background-size: cover;
+      opacity: .2;
+    }
+
+    .cover-logo{
+      margin-top: 80px;
+    }
+
+.btn{
+  background: transparent;
+  .border-radius(3px);
+}
+
+  .btn-default{
+    border-color: @color-main;
+    .transition(background .15 ease-in, color .15 ease);
+
+    &:hover{
+      background: @color-main;
+      color: @white;
+    }
+  }
+
+  .btn-white{
+    border-color: @white;
+    .transition(background .15 ease-in, color .15 ease);
+
+    &:hover{
+      background: @white;
+      color: @color-main;
+    }
+  }
+
+  .btn-width-m{
+    width: 190px;
+    margin: 0 5px;
+  }
