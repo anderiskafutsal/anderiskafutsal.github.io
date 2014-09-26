@@ -3,23 +3,49 @@
 @import url('variables.less');
 @import url('mixins.less');
 
+
 body{
   color: @color-main;
   font-family: 'lato', sans-serif;
 }
 
+
 h1, h2, h3, h4, h5, h6{
   font-weight: bold;
 }
 
+
+.big-text{
+  font-size: 18px;
+}
+
+p{
+  margin-bottom: @base-line-height;
+}
+
+
+.container{
+  @media(min-width: @screen-lg-min){
+    width: 970px;
+  }
+}
+
+
+.center-xs{
+  @media(max-width: @screen-xs-max){
+    text-align: center !important;
+  }
+}
+
+
 .page-section{
-  padding: 40px 0;
+  padding: (2 * @base-line-height) 0;
   position: relative;
 }
 
   .cover-section{
     padding-top: 0;
-    height: 560px;
+    height: 28 * @base-line-height;
     color: @white;
     background: @color-dark-main;
 
@@ -42,8 +68,34 @@ h1, h2, h3, h4, h5, h6{
     }
 
     .cover-logo{
-      margin-top: 80px;
+      margin-top: 4 * @base-line-height;
+      margin-bottom: 2 * @base-line-height;
     }
+
+.navbar-toggle{
+  .icon-bar{
+    background: @white;
+  }
+}
+
+.navbar-nav{
+  &>li{
+    &>a{
+      font-weight: normal;
+      color: @white;
+      text-transform: uppercase;
+      opacity: .8;
+      .transition(opacity .25s easeInOutExpo);
+
+      &:hover,
+      &:focus{
+        opacity: 1;
+        background: transparent;
+      }
+    }
+  }
+}
+
 
 .btn{
   background: transparent;
@@ -52,9 +104,11 @@ h1, h2, h3, h4, h5, h6{
 
   .btn-default{
     border-color: @color-main;
+    color: @color-main;
     .transition(background .15 ease-in, color .15 ease);
 
-    &:hover{
+    &:hover,
+    &:focus{
       background: @color-main;
       color: @white;
     }
@@ -62,9 +116,11 @@ h1, h2, h3, h4, h5, h6{
 
   .btn-white{
     border-color: @white;
+    color: @white;
     .transition(background .15 ease-in, color .15 ease);
 
-    &:hover{
+    &:hover,
+    &:focus{
       background: @white;
       color: @color-main;
     }
@@ -74,3 +130,98 @@ h1, h2, h3, h4, h5, h6{
     width: 190px;
     margin: 0 5px;
   }
+
+
+.photo-gallery{
+  //.clearfix;
+  margin-top: @base-line-height;
+  margin-bottom: 2 * @base-line-height;
+}
+
+  .photo-link{
+    display: block;
+    width: 20%;
+    float: left;
+    height: 320px;
+    overflow: hidden;
+    background: @color-main;
+
+    // @media(min-width: @screen-sm-min){
+    //   float: left;
+    //   width: 20%;
+    // }
+
+    // &:nth-child(odd){
+    //   background: @color-dark-main;
+    // }
+  }
+
+    .photo-thumb{
+      min-width: 100%;
+      opacity: .4;
+      .transition(opacity .25s ease-out; transform 5s ease-out);
+
+      &:hover{
+        opacity: 1;
+        .scale(1.2);
+      }
+    }
+
+
+#section_lokasi{
+  position: relative;
+  min-height: 320px;
+  padding: 0;
+  overflow: hidden;
+  .transition(height .25s cubic-bezier(0.680, -0.550, 0.265, 1.550));
+
+  &.map-shown, &:hover{
+    // height: 480px;
+
+    .map-overlay{
+      .translateY(100%);
+    }
+  }
+}
+
+  .map-canvas{
+   position: relative;
+   min-height: 320px;
+   height: 100%;
+   width: 100%;
+  }
+
+  .map-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(red(@color-dark-main), green(@color-dark-main), blue(@color-dark-main), 0.75);
+    .transition(transform .25s .25s ease-in);
+  }
+
+
+#jadwal_modal{
+
+  & > .modal-dialog{
+    @media(min-width: @screen-md-min){
+      width: 970px;
+    }
+
+    @media(min-width: @screen-lg-min){
+      width: 1170px;
+    }
+  }
+}
+
+  .jadwal-frame{
+    width: 100%;
+    min-height: 24 * @base-line-height;
+  }
+
+footer{
+  background: @color-dark-main;
+  color: @white;
+  padding: 2 * @base-line-height;
+}

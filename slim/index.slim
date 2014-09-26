@@ -1,11 +1,44 @@
 doctype html
 html
   head
-    title Anderiska Futsal | Futsal Rumput Sintetis Riung Bandung Timur
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
     meta name="keywords" content="futsal riung bandung timur rumput sintetis"
+    title Anderiska Futsal | Futsal Rumput Sintetis Riung Bandung Timur
 
     link rel="stylesheet" href="css/bootstrap.min.css"
+    link rel="stylesheet" href="css/lightbox.css"
     link rel="stylesheet" href="css/style.css"
+
+    script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvYwaiBEKavd_wYVNPT_YDOXddYbf_pM0" type="text/javascript"
+    javascript:
+      function initialize() {
+        var centerLatlng = new google.maps.LatLng(-6.94375, 107.682162);
+        var mapOptions = {
+          center: centerLatlng,
+          zoom: 15,
+          scrollwheel: false
+        };
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+        var afLatlng = new google.maps.LatLng(-6.945453, 107.682162);
+
+        var marker = new google.maps.Marker({
+          position: afLatlng,
+          map: map,
+          title:"Anderiska Futsal"
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    /! HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    /! WARNING: Respond.js doesn't work if you view the page via file://
+    /![if lt IE 9]
+      | <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      | <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
   body
     section.page-section.cover-section
       header.navbar role="navigation"
@@ -16,7 +49,7 @@ html
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand href="#"
+            a.navbar-brand href="index.html"
               img src="img/logo.png" alt="Anderiska logo"
           .collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
@@ -31,7 +64,7 @@ html
       .cover-bg &nbsp;
       .container
         .row
-          .col-sm-6.col-sm-offset-3.text-center
+          .col-sm-8.col-sm-offset-2.text-center
             img.cover-logo src="img/cover-logo.png" alt="Anderiska Futsal Cover"
 
             p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
@@ -44,34 +77,51 @@ html
       .container
         .row
           .col-sm-8.col-sm-offset-2.text-center
-            h2 Lapangan Futsal Rumput Sintetis di Bandung Timur
+            h3 Lapangan Futsal Rumput Sintetis di Bandung Timur
             p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
 
+          .col-xs-12
+            .photo-gallery.clearfix
+              a.photo-link href="img/img-1.jpg" data-lightbox="gallery"
+                img.photo-thumb src="img/thumb-1.jpg" alt="Anderiska Futsal Lapangan"
+              a.photo-link href="img/img-2.jpg" data-lightbox="gallery"
+                img.photo-thumb src="img/thumb-2.jpg" alt="Anderiska Futsal Lapangan"
+              a.photo-link href="img/img-3.jpg" data-lightbox="gallery"
+                img.photo-thumb src="img/thumb-3.jpg" alt="Anderiska Futsal Lapangan"
+              a.photo-link href="img/img-4.jpg" data-lightbox="gallery"
+                img.photo-thumb src="img/thumb-4.jpg" alt="Anderiska Futsal Lapangan"
+              a.photo-link href="img/img-5.jpg" data-lightbox="gallery"
+                img.photo-thumb src="img/thumb-5.jpg" alt="Anderiska Futsal Lapangan"
 
-          .col-sm-6.col-md-3
-            h3 Standar Internasional
-            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
-          .col-sm-6.col-md-3
-            h3 Free WiFi
-            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
-          .col-sm-6.col-md-3
-            h3 Parkir Luas
-            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
-          .col-sm-6.col-md-3
-            h3 Kantin
-            p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+            .row.features.center-xs style="margin-bottom: 20px"
+              .col-sm-6.col-md-3
+                h4 Standar Internasional
+                p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+              .col-sm-6.col-md-3
+                h4 Free WiFi
+                p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+              .col-sm-6.col-md-3
+                h4 Parkir Luas
+                p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+              .col-sm-6.col-md-3
+                h4 Kantin
+                p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
     section#section_lokasi.page-section
+      #map_canvas.map-canvas
+      .map-overlay
     section#section_booking.page-section
       .container
         .row
-          .col-sm-6
-            h2 Booking Lapangan
+          .col-sm-7.center-xs
+            h3 Booking Lapangan
             p Untuk booking lapangan bisa dengan menelepon atau datang langsung ke lapangan dengan alamat disamping. Untuk mengetahui ketersediaan lapang klik tombol dibawah ini.
-            button.btn.btn-default data-toggle="modal" data-target="#modal_jadwal" Lihat Jadwal
-          .col-sm-6.text-right
-            div (022) 929-74-502
-            div Jl. Riung Arum Timur III No.44
-            div Lihat di Peta
+            button.btn.btn-default data-toggle="modal" data-target="#jadwal_modal" Lihat Jadwal
+          .col-sm-5.text-right.center-xs
+            .big-text style="margin-top: 20px; margin-bottom: 10px;"
+              | (022) 929-74-502
+            .big-text
+              | Jl. Riung Arum Timur III No.44
+            a href="#section_lokasi" Lihat di Peta
     footer
       .container
         .row
@@ -80,16 +130,19 @@ html
           .col-sm-6.footer-menu
 
     #jadwal_modal.modal.fade
-      .modal-dialog style="width: 1170px;"
+      .modal-dialog
         .modal-content
           .modal-header
             button.close data-dismiss="modal" type="button"
               span aria-hidden="true"  &times;
               span.sr-only Close
-            h4.modal-title Modal title
+            h4.modal-title Jadwal Lapang
           .modal-body
-            iframe src="https://docs.google.com/spreadsheets/d/1Vtp4ykOfpmzm7X9jpvuNtsfdT9qZs3dtuBzuZqvCEsU/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="width: 100%; min-height: 480px;"
+            iframe.jadwal-frame src="https://docs.google.com/spreadsheets/d/1Vtp4ykOfpmzm7X9jpvuNtsfdT9qZs3dtuBzuZqvCEsU/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
 
 
     script src="js/jquery-1.11.1.min.js"
     script src="js/bootstrap.min.js"
+    script src="js/lightbox.min.js"
+    script src="js/jquery.scrollTo.min.js"
+    script src="js/script.js"

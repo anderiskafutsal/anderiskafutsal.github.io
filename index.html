@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Anderiska Futsal | Futsal Rumput Sintetis Riung Bandung Timur</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="futsal riung bandung timur rumput sintetis" name="keywords">
+    <title>Anderiska Futsal | Futsal Rumput Sintetis Riung Bandung Timur</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvYwaiBEKavd_wYVNPT_YDOXddYbf_pM0" type="text/javascript"></script>
+    <script type="text/javascript">
+      function initialize() {
+        var centerLatlng = new google.maps.LatLng(-6.94375, 107.682162);
+        var mapOptions = {
+          center: centerLatlng,
+          zoom: 15,
+          scrollwheel: false
+        };
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+      
+        var afLatlng = new google.maps.LatLng(-6.945453, 107.682162);
+      
+        var marker = new google.maps.Marker({
+          position: afLatlng,
+          map: map,
+          title:"Anderiska Futsal"
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries--><!--WARNING: Respond.js doesn't work if you view the page via file://--><!--[if lt IE 9]
+    | <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    | <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
   </head>
   <body>
     <section class="page-section cover-section">
       <header class="navbar" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#"><img alt="Anderiska logo" src="img/logo.png"></a>
+            <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html"><img alt="Anderiska logo" src="img/logo.png"></a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -36,7 +64,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-sm-6 col-sm-offset-3 text-center">
+          <div class="col-sm-8 col-sm-offset-2 text-center">
             <img alt="Anderiska Futsal Cover" class="cover-logo" src="img/cover-logo.png">
             <p>
               Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
@@ -52,71 +80,79 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2 text-center">
-            <h2>
+            <h3>
               Lapangan Futsal Rumput Sintetis di Bandung Timur
-            </h2>
-            <p>
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <h3>
-              Standar Internasional
             </h3>
             <p>
               Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
             </p>
           </div>
-          <div class="col-sm-6 col-md-3">
-            <h3>
-              Free WiFi
-            </h3>
-            <p>
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <h3>
-              Parkir Luas
-            </h3>
-            <p>
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
-            </p>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <h3>
-              Kantin
-            </h3>
-            <p>
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
-            </p>
+          <div class="col-xs-12">
+            <div class="photo-gallery clearfix">
+              <a class="photo-link" data-lightbox="gallery" href="img/img-1.jpg"><img alt="Anderiska Futsal Lapangan" class="photo-thumb" src="img/thumb-1.jpg"></a><a class="photo-link" data-lightbox="gallery" href="img/img-2.jpg"><img alt="Anderiska Futsal Lapangan" class="photo-thumb" src="img/thumb-2.jpg"></a><a class="photo-link" data-lightbox="gallery" href="img/img-3.jpg"><img alt="Anderiska Futsal Lapangan" class="photo-thumb" src="img/thumb-3.jpg"></a><a class="photo-link" data-lightbox="gallery" href="img/img-4.jpg"><img alt="Anderiska Futsal Lapangan" class="photo-thumb" src="img/thumb-4.jpg"></a><a class="photo-link" data-lightbox="gallery" href="img/img-5.jpg"><img alt="Anderiska Futsal Lapangan" class="photo-thumb" src="img/thumb-5.jpg"></a>
+            </div>
+            <div class="row features center-xs" style="margin-bottom: 20px">
+              <div class="col-sm-6 col-md-3">
+                <h4>
+                  Standar Internasional
+                </h4>
+                <p>
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+                </p>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <h4>
+                  Free WiFi
+                </h4>
+                <p>
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+                </p>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <h4>
+                  Parkir Luas
+                </h4>
+                <p>
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+                </p>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <h4>
+                  Kantin
+                </h4>
+                <p>
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, eget odio sem nec elit.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="page-section" id="section_lokasi"></section>
+    <section class="page-section" id="section_lokasi">
+      <div class="map-canvas" id="map_canvas"></div>
+      <div class="map-overlay"></div>
+    </section>
     <section class="page-section" id="section_booking">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6">
-            <h2>
+          <div class="col-sm-7 center-xs">
+            <h3>
               Booking Lapangan
-            </h2>
+            </h3>
             <p>
               Untuk booking lapangan bisa dengan menelepon atau datang langsung ke lapangan dengan alamat disamping. Untuk mengetahui ketersediaan lapang klik tombol dibawah ini.
             </p>
-            <button class="btn btn-default" data-target="#modal_jadwal" data-toggle="modal">Lihat Jadwal</button>
+            <button class="btn btn-default" data-target="#jadwal_modal" data-toggle="modal">Lihat Jadwal</button>
           </div>
-          <div class="col-sm-6 text-right">
-            <div 022="">
-              929-74-502
+          <div class="col-sm-5 text-right center-xs">
+            <div class="big-text" style="margin-top: 20px; margin-bottom: 10px;">
+              (022) 929-74-502
             </div>
-            <div>
+            <div class="big-text">
               Jl. Riung Arum Timur III No.44
             </div>
-            <div>
-              Lihat di Peta
-            </div>
+            <a href="#section_lokasi">Lihat di Peta</a>
           </div>
         </div>
       </div>
@@ -132,21 +168,24 @@
       </div>
     </footer>
     <div class="modal fade" id="jadwal_modal">
-      <div class="modal-dialog" style="width: 1170px;">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true"> &times;</span><span class="sr-only">Close</span></button>
             <h4 class="modal-title">
-              Modal title
+              Jadwal Lapang
             </h4>
           </div>
           <div class="modal-body">
-            <iframe src="https://docs.google.com/spreadsheets/d/1Vtp4ykOfpmzm7X9jpvuNtsfdT9qZs3dtuBzuZqvCEsU/pubhtml?gid=0&amp;amp;single=true&amp;amp;widget=true&amp;amp;headers=false" style="width: 100%; min-height: 480px;"></iframe>
+            <iframe class="jadwal-frame" src="https://docs.google.com/spreadsheets/d/1Vtp4ykOfpmzm7X9jpvuNtsfdT9qZs3dtuBzuZqvCEsU/pubhtml?gid=0&amp;amp;single=true&amp;amp;widget=true&amp;amp;headers=false"></iframe>
           </div>
         </div>
       </div>
     </div>
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
