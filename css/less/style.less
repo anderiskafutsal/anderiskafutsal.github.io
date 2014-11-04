@@ -225,3 +225,105 @@ footer{
   color: @white;
   padding: 2 * @base-line-height;
 }
+
+
+.pricing-table{
+  padding: 3 * @base-line-height 0;
+  position: relative;
+  .clearfix;
+}
+
+  .pricing-plan{
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 100%/3;
+    text-align: center;
+    background: #F5F5F5;
+    // border: 1px solid @silver;
+    .box-shadow(0 3px 25px 0 rgba(0,0,0,.15));
+  }
+
+    .plan-title{
+      text-transform: uppercase;
+      background: #666;
+      color: #FFF;
+      padding: 5px 0;
+      // font-family: @font-semibold;
+      font-weight: 600;
+    }
+
+    .plan-price{
+      padding: (1.5 * @base-line-height) 0;
+      background: #F5414E;
+      color: #FFF;
+      font-size: 36px;
+      line-height: 2 * @base-line-height;
+    }
+
+      .plan-per{
+        font-size: 12px;
+        // font-family: @font-semibold;
+        font-weight: 600;
+        line-height: @base-line-height;
+      }
+
+    .plan-action{
+      padding: 1 * @base-line-height 10px 2 * @base-line-height 10px;
+    }
+
+    .plan-super{
+      z-index: 2;
+      margin-top: -1.5 * @base-line-height;
+      background: #FEFEFE;
+      .box-shadow(0 3px 25px 0 rgba(0,0,0,.3));
+
+      .plan-price{
+        padding-top: 2 * @base-line-height;
+        padding-bottom: 2.5 * @base-line-height;
+        background: #FF4351;
+      }
+
+      .plan-action{
+        padding-top: 1.5 * @base-line-height;
+        padding-bottom: 2.5 * @base-line-height;
+      }
+    }
+
+.feature-col {
+  margin-top: 8.5 * @base-line-height + 1;
+  text-align: center;
+  font-weight: bold;
+  margin-right: -30px;
+}
+
+.feature-row {
+  height: 39px;
+  line-height: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+
+.pills-hollow{
+  .border-radius(3px);
+  overflow: hidden;
+  border: 1px solid @asbestos;
+
+  & > li{
+    & > a{
+      .border-radius(0);
+      color: @asbestos;
+    }
+
+    &.active{
+      & > a{
+        &, &:hover{
+          background: @asbestos;
+          color: @white;
+        }
+      }
+    }
+  }
+
+}

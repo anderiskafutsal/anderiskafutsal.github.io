@@ -226,3 +226,101 @@ footer {
   color: #ffffff;
   padding: 40px;
 }
+.pricing-table {
+  padding: 60px 0;
+  position: relative;
+}
+.pricing-table:before,
+.pricing-table:after {
+  content: " ";
+  display: table;
+}
+.pricing-table:after {
+  clear: both;
+}
+.pricing-plan {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 33.333333333333336%;
+  text-align: center;
+  background: #F5F5F5;
+  -webkit-box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.15);
+}
+.plan-title {
+  text-transform: uppercase;
+  background: #666;
+  color: #FFF;
+  padding: 5px 0;
+  font-weight: 600;
+}
+.plan-price {
+  padding: 30px 0;
+  background: #F5414E;
+  color: #FFF;
+  font-size: 36px;
+  line-height: 40px;
+}
+.plan-per {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.plan-action {
+  padding: 20px 10px 40px 10px;
+}
+.plan-super {
+  z-index: 2;
+  margin-top: -30px;
+  background: #FEFEFE;
+  -webkit-box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.3);
+}
+.plan-super .plan-price {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background: #FF4351;
+}
+.plan-super .plan-action {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.feature-col {
+  margin-top: 171px;
+  text-align: center;
+  font-weight: bold;
+  margin-right: -30px;
+}
+.feature-row {
+  height: 39px;
+  line-height: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.pills-hollow {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 1px solid #7f8c8d;
+}
+.pills-hollow > li > a {
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  color: #7f8c8d;
+}
+.pills-hollow > li.active > a,
+.pills-hollow > li.active > a:hover {
+  background: #7f8c8d;
+  color: #ffffff;
+}
